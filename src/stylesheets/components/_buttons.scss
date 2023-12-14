@@ -1,0 +1,17 @@
+.menu-toggle-on, .menu-toggle-off {
+  width: 40px;
+
+  @media (min-width: 801px) {
+    display: none;
+  }
+}
+
+.menu-toggle-off {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+
+  &__img {
+    width: 100%;
+  }
+}

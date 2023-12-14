@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Inter Regular";
+  src: url("../assets/fonts/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter Bold";
+  src: url("../assets/fonts/static/Inter-Bold.ttf");
+}
+@font-face {
+  font-family: "Inter Extra Bold";
+  src: url("../assets/fonts/static/Inter-ExtraBold.ttf");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "Inter Extra Bold";
+  font-size: 4em;
+}
+
+h2 {
+  font-family: "Inter Bold";
+  font-size: 3em;
+}
+
+h3 {
+  font-family: "Inter Bold";
+  font-size: 2em;
+}
+
+p,
+a {
+  font-family: "Inter Regular";
+  font-size: 1em;
+  color: #5d5f79;
+}
+
+.menu-toggle-on, .menu-toggle-off {
+  width: 40px;
+}
+@media (min-width: 801px) {
+  .menu-toggle-on, .menu-toggle-off {
+    display: none;
+  }
+}
+
+.menu-toggle-off {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.menu-toggle-off__img {
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  padding-inline: 10vw;
+  padding-top: 4vw;
+  padding-bottom: 7.5rem;
+  background-color: #fffdfa;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-container {
+  display: flex;
+  gap: 3rem;
+}
+
+@media (max-width: 800px) {
+  .header-nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 500ms ease, z-index 500ms;
+    z-index: -1;
+  }
+
+  .header-nav.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .nav-container {
+    position: absolute;
+    width: 65vw;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    padding-top: 30%;
+    padding-left: 2rem;
+    background-color: #fffdfa;
+    transform: translateX(100%);
+    transition: transform 500ms ease;
+  }
+
+  .nav-container.expanded {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 801px) {
+  .nav-container {
+    height: 100%;
+    align-items: center;
+  }
+}
+.main-content {
+  margin-top: 3vw;
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */

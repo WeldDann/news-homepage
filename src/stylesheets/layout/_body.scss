@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+body {
+	min-height: 100vh;
+	padding: {
+		inline: 10vw;
+		top: 4vw;
+		bottom: 7.5rem;
+	}
+	background-color: $primary-bg;
+}
