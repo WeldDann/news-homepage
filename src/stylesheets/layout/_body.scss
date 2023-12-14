@@ -3,9 +3,13 @@
 body {
 	min-height: 100vh;
 	padding: {
-		inline: 10vw;
+		inline: 1.25rem;
 		top: 4vw;
 		bottom: 7.5rem;
 	}
 	background-color: $primary-bg;
+
+	@media (min-width: 801px) {
+		padding-inline: 10vw;
+	}
 }
