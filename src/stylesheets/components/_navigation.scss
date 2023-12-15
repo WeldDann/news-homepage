@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.nav-container {
+  list-style: none;
+}
+
+[class$="link"] a {
+  text-decoration: none;
+  transition: color 300ms ease;
+
+  &:is(:hover, :focus) {
+    color: $primary-orange;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 1.5em;
+  }
+
+}

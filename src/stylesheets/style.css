@@ -109,6 +109,23 @@ a {
   }
 }
 
+.nav-container {
+  list-style: none;
+}
+
+[class$=link] a {
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+[class$=link] a:is(:hover, :focus) {
+  color: #e9ab53;
+}
+@media (max-width: 800px) {
+  [class$=link] a {
+    font-size: 1.5em;
+  }
+}
+
 body {
   min-height: 100vh;
   padding-inline: 1.25rem;
@@ -151,11 +168,11 @@ body {
 
   .nav-container {
     position: absolute;
-    width: 65vw;
+    width: 70vw;
     height: 100vh;
     right: 0;
     flex-direction: column;
-    padding-top: 30%;
+    padding-top: 20vh;
     padding-left: 2rem;
     background-color: #fffdfa;
     transform: translateX(100%);
