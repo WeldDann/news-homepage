@@ -88,7 +88,10 @@ a {
 .main-side__item {
   padding-block: 2rem;
 }
-.main-side__item .link {
+.main-side__item:is(:nth-of-type(1), :nth-of-type(2)) {
+  border-bottom: 1px solid #c5c6ce;
+}
+.main-side .link {
   letter-spacing: 0.05em;
   font-family: "Inter Bold";
   font-size: 1.25em;
@@ -96,18 +99,45 @@ a {
   text-decoration: none;
   transition: color 300ms ease;
 }
-.main-side__item .paragraph {
+.main-side .link:is(:hover, :focus) {
+  color: #e9ab53;
+}
+.main-side .paragraph {
   margin-top: 0.75rem;
   color: #c5c6ce;
-}
-.main-side__item:is(:nth-of-type(1), :nth-of-type(2)) {
-  border-bottom: 1px solid #c5c6ce;
 }
 
 .main-bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+.main-bottom__item {
+  display: grid;
+  grid-template-columns: 100px auto;
+  column-gap: 1.5rem;
+}
+.main-bottom .illustration {
+  height: 100%;
+  object-fit: cover;
+  grid-row: 1/span 3;
+}
+.main-bottom .number {
+  color: #c5c6ce;
+}
+.main-bottom .link {
+  align-self: center;
+  font-family: "Inter Bold";
+  font-size: 1.25em;
+  text-decoration: none;
+  color: black;
+  transition: color 300ms ease;
+}
+.main-bottom .link:is(:hover, :focus) {
+  color: #f15e50;
+}
+.main-bottom .paragraph {
+  align-self: self-end;
 }
 @media (max-width: 1100px) {
   .main-bottom {
