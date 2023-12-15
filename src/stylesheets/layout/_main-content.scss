@@ -1,15 +1,13 @@
 .main-content {
 	margin-top: 3vw;
 	display: grid;
-	gap: 1.5rem;
-
-
+	gap: 2rem;
 }
 
 @media (min-width: 801px) {
 
 	.main-content {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template: 350px / repeat(3, 1fr);
 	}
 
 	.main-img    { grid-area: 1 / 1 / 2 / span 2; }
