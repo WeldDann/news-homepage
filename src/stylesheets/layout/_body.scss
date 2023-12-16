@@ -9,7 +9,7 @@ body {
 	}
 	background-color: $primary-bg;
 
-	@media (min-width: 801px) {
+	@media (min-width: 500px) {
 		padding-inline: 10vw;
 	}
 }

@@ -1,7 +1,9 @@
+@use '../abstracts' as *;
+
 .menu-toggle-on, .menu-toggle-off {
   width: 40px;
 
-  @media (min-width: 801px) {
+  @media (min-width: 950px) {
     display: none;
   }
 }
@@ -13,5 +15,29 @@
 
   &__img {
     width: 100%;
+  }
+}
+
+.read-more-link {
+  display: inline-block;
+  align-self: self-end;
+  justify-self: self-start;
+  padding: {
+    block: 1rem;
+    inline: 2rem;
+  }
+
+  background-color: $primary-red;
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
+  letter-spacing: 0.25em;
+  font-family: 'Inter Bold';
+  color: white;
+  transition: background-color 300ms ease;
+
+  &:is(:hover, :focus) {
+    background-color: $very-dark-blue;
   }
 }
