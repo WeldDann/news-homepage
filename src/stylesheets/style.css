@@ -114,7 +114,7 @@ a {
 }
 .main-bottom__item {
   display: grid;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 120px auto;
   column-gap: 1.5rem;
 }
 .main-bottom .illustration {
@@ -178,6 +178,28 @@ a {
   [class$=link] a {
     font-size: 1.25em;
   }
+}
+
+.main-title {
+  align-self: center;
+}
+
+.main-desc {
+  position: relative;
+  height: 100%;
+  align-self: center;
+}
+.main-desc .read-more-link {
+  position: absolute;
+  bottom: 0;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  background-color: #f15e50;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.25em;
+  font-family: "Inter Bold";
+  color: white;
 }
 
 body {
